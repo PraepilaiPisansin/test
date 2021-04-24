@@ -1,0 +1,433 @@
+  
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body,
+#root {
+  height: 100vh;
+  margin: 0;
+}
+body,
+input,
+select,
+button,
+textarea {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #720e0e;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 18px;
+  text-align: right;
+ 
+}
+
+a {
+  text-decoration: none;
+}
+
+
+header a {
+  color: #ffffff;
+   margin-right: 1rem;
+  margin-left: 1rem;
+  
+}
+header a:hover{
+  color: #f7ac0c;
+}
+header a:active{
+  color: #f7570c;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background-color: #720e0e;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main {
+  flex: 3 60rem;
+  padding: 2rem;
+}
+.sidebar {
+  flex: 1 20rem;
+}
+/*admin*/
+.admin{
+  grid-area: header;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 18px;
+  float:right;
+}
+/*hello*/
+.hello-head{
+  grid-area: header;
+  color: #ffffff;
+  padding: 0.5rem;
+  float:left;
+}
+/* styling search bar */
+    .search input[type=text]{
+        width:40rem;
+        height:3rem;
+        border-radius:25px;
+        border:  1rem #f11f1f !important;
+    }
+          
+    .search{
+        float:right;
+        margin:7px;
+    }
+          
+    .search button{
+        background-color: #ffffff;
+        color: #203040;
+        float: right;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 18px;
+        cursor: pointer;
+    } 
+    .search a{
+       
+        font-size: 10px;
+        
+    } 
+ .search button:hover{
+  color: #f7ac0c;
+}
+.search button:active{
+  color: #f7570c;
+}
+
+/* products */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.product p {
+  font-weight: bold;
+  color: #720e0e;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0.5rem;
+  
+}
+.products li {
+  flex: 0 1 18rem;
+  height: 37rem;
+  padding: 1rem;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product img {
+  width: 18rem;
+  height: 25rem;
+  border: 0.1rem #d8d5d5 solid;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-price div,
+.product-price button {
+  text-align: center;
+  flex: 1;
+}
+.product-price div {
+  font-size: 18px;
+  font-weight: bold;
+}
+.button {
+  flex: 1;
+  padding: 0.5rem;
+  border: 0.1rem #c0c0c0;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.button:hover {
+  border: 0.1rem #c0c0c0 solid;
+  background-color:#e25a0b  !important;
+}
+.button:active {
+  background-color: #e25a0b !important;
+}
+.button.primary {
+  background-color: #f0c040;
+}
+
+
+/* Filter */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+.filter div {
+  flex: 1;
+}
+/* Index.css */
+.cart {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+ 
+}
+.cart-header {
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+.cart-items {
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  background-image: linear-gradient(to bottom right, rgb(219, 213, 213), rgb(255, 255, 255));
+  border-radius: 5px;
+}
+.cart-items img {
+  width: 5rem;
+}
+.cart-items li {
+  display: flex;
+}
+.cart-items li div {
+  padding: 0.5rem;
+}
+.cart-items li div:last-child {
+  flex: 1;
+}
+.right {
+  text-align: right;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  
+}
+.total > div {
+  font-size: 1.5rem;
+  font-weight: bold;
+ 
+}
+.total > div,
+.total > button {
+  flex: 1;
+}
+/* Checkout form */
+form {
+  width: 100%;
+}
+.form-container {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+.form-container li {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+input {
+  padding: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+}
+/* Product Details */
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 96vh;
+}
+.product-details img {
+  max-height: 100vh;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+.product-details-description {
+  flex: 1 1;
+  margin: 1rem;
+}
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  z-index: 1000;
+}
+
+/* Order Details */
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.order-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-details li div {
+  padding: 10px;
+}
+.order-details .items {
+  text-align: right;
+  padding: 0;
+}
+.success-message {
+  color: rgb(0, 128, 68);
+}
+/* Orders */
+.orders {
+  width: 100%;
+  padding: 30px;
+  
+ 
+}
+.order-text{
+  font-size: 4rem;
+  font-weight: bolder;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.order-text small {
+  font-size: 0.5em;
+  padding-left: 10px;
+}
+
+/*Table*/
+
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+td {
+  padding: 5px;
+  font-family: 'lato', sans-serif;
+}
+th {
+  text-align: left;
+   background-color: #95A5A6;
+  color: white;
+   font-size: 14px;
+   text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/*Icons*/
+.icon {
+  font-size: 2rem;
+}
+/*button*/
+.remove{
+  margin-left: 8px;
+  border-radius: 6px;
+  border: 0.1rem #c0c0c0;
+  background-color: #f0f0f0;
+  font-size: 20px;
+
+}
+  .remove:hover {
+  border: 0.1rem #b43232 solid;
+
+}.remove:active {
+  background-color: #b43232 !important;
+ 
+}
+
+.icon-remove:active{
+color: #ffffff !important;
+
+}
+.icon-remove:hover{
+color:  #b43232;
+}
+/*--------------------*/
+.round{
+  border-radius: 10rem;
+  float:right;
+  margin-left: 30px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 15px;
+}
+
+.gradient-button {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(34, 34, 34);
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+}
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+.gradient-button-1 {
+  background-image: linear-gradient(to right, rgb(243, 114, 55) 0%, rgb(252, 199, 26) 51%, rgb(243, 114, 55) 100%)}
+.gradient-button-1:hover { background-position: right center; }
